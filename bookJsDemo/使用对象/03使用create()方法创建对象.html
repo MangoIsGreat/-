@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 使用Object.create()创建一个对象,继承自null,即把null做为原型,该对象包含两个可枚举的属性size和shape
+        // var newObj = Object.create(null, {
+        //     size : {
+        //         value : 'large',
+        //         // enumerable: 可列举的
+        //         enumerable : true
+        //     },
+        //     shape : {
+        //         value : 'round',
+        //         enumerable : true
+        //     }
+        // });
+        // document.write(newObj.size + '<br/>');
+        // document.write(newObj.size + '<br/>');
+        // document.write(Object.getPrototypeOf(newObj));
+
+        // 使用Object.create()创建一个与Object对象具有相同原型的对象
+        // ,该对象具有与使用对象直接量创建的对象相同的原型
+        // ,Object.getPrototypeOf可获取原始对象的原型,如果要获取对象的属性描述符,
+        // 可以使用Object.getOwnPropertyDescriptor函数
+
+        // var firstLine = {x : undefined, y : undefined};
+        // var secondLine = Object.create(Object.prototype, {
+        //     x : {
+        //         value : undefined,
+        //         writable : true,
+        //         configurable : true,
+        //         enumerable : true
+        //     },
+        //     y : {
+        //         value : undefined,
+        //         writeable : true,
+        //         configurable : true, //可配置的；结构的
+        //         // enumerable: 可列举的
+        //         enumerable : true
+        //     }
+        // });
+        // document.write('first line prototype = ' + Object.getPrototypeOf(firstLine));
+        // document.write('<br/>');
+        // document.write('second line prototype = ' + Object.getPrototypeOf(secondLine));
+
+        // 例3:创建一个对象,该对象继承自Shape对象,即把Shape对象作为Squire对象的原型
+        var Shape = {twoDimensional : true, color: undefined, hasLineSegments: undefined};
+        var Squire = Object.create(Shape);
+        document.write(Squire.twoDimensional);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 使用对象直接量创建对象是最高效/最简便的方法
+        // var o = {  //对象直接量
+        //     a : 1,  //定义属性
+        //     b : true  //定义属性
+        // }
+
+
+        // // 属性值:任意类型的数据   属性名:任意形式的字符串
+        // // 第二种方式:
+        // var o = { //对象直接量
+        //     "a" : 1, //定义属性
+        //     "b" : true  //定义属性
+        // }
+
+        // // 但在构造函数中:变量名不能使用合法的字符串表示,在构造函数中也不能使用字符串标签来命名属性名,因为此时的属性名是合法的标识符
+        // var o = function () { //构造函数
+        //     this.a = 1;  //定义属性
+        //     this.b = true;  //定义属性
+        // }
+
+        // 对象的属性值可以是任意类型数据,如值类型数据/数组/对象/函数等
+        // var o = {  //对象直接量
+        //     a : function () {  //属性值为函数
+        //         return 1;
+        //     }
+        // }
+        // alert(o.a());
+
+        // 如果属性值是对象,则可以设计嵌套结构的对象
+        // var o = {  //对象直接量
+        //     a : {  //属性值为对象
+        //         b : 1
+        //     }
+        // }
+
+        // console.log(o.a.b);
+
+            // 属性值是数组
+        // var o = {
+        //     a : [1, 2, 3]
+        // }
+        // console.log(o.a[1])
+
+        // 创建一个空对象直接量
+        var o = {}
+    </script>
+</body>
+</html>

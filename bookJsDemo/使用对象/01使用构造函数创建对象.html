@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 使用new运算符调用函数，可以构造一个实例对象
+        // var objectName = new functionName(args);
+        // // 使用构造函数创建对象
+        // var o = new Object (); //创建一个空对象
+        // var o = new Array(); //创建一个空的数组对象
+        // var o = new MyClass(); //创建一个自定义对象
+
+        // 使用内置构造函数创建的对象将会继承该构造函数的属性和方法
+        // var o = new Array(); //创建一个空的数组对象
+        // alert(o.length);  //返回值为0, 说明当前数组为0个元素
+        // var l = o.push(1, 2, 3);  //调用push()方法为数组增加3个元素
+        // console.log(l); //返回值3,说明数组中包含3个新元素
+
+        // //定义一个构造函数Box(),使用new运算符实例化构造函数
+        // function Box(w, h) {  //构造函数
+        //     this.w = w;  //构造函数的成员
+        //     this.h = h;  //构造函数的成员
+        // }
+        // var box1 = new Box(4, 5);  //实例并初始化构造函数
+
+        // 构造函数没有返回值,只是初始化this关键字传递进来的对象,但构造函数可以返回一个对象值,.....
+        // function Box(w, h) {  //构造函数
+        //     this.w = w;
+        //     this.h = h;
+        //     return this;  //返回关键字this
+        // }
+        // alert(Box(4, 5).w);  //返回参数值4,此时构造函数成为普通函数
+
+        // //不过可以实例化构造函数,并调用该对象的属性
+        // var box1 = new Box(4, 5);
+        // console.log(box1.w);
+
+        function Book(title, pages) {  //把书稿构造为函数
+            this.title = title;
+            this.pages = pages;
+            this.what = function () {
+                alert(this.title + this.pages);
+            }
+        }
+        var book1 = new Book('js程序设计', 160);  //实例化构造函数,并初始化
+        var book2 = new Book('C语言程序设计', 50);
+
+        book1.what();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
